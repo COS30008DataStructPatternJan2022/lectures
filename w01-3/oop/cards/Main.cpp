@@ -13,16 +13,16 @@ void checkCardByVal(const Card c1, const Card c2) {
 
 void checkCardByRef(Card * c1, Card  * c2) {
   // todo: how do we improve this check?
-  if (c1 == c2) {
-    cout << c1 <<  " == " << c2 << endl;
+  if (*c1 == *c2) {
+    cout << *c1 << " (" << c1<< ") " << " == " << *c2 << " (" << c2<< ") "  << endl;
   } else {
-    cout << c1 << " != " << c2 << endl;
+    cout << *c1 << " (" << c1<< ") " << " != " << *c2 << " (" << c2<< ") " << endl;
   }
 }
 
 void valueModel() {
   cout << "valueModel()" << endl;
-  Card c1 = Card(Diamond, 14);
+  Card c1(Diamond, 14);
   Card c2 = Card(Diamond, 14);
   Card c3 = Card(Spade, 14);
 
