@@ -6,7 +6,7 @@ using namespace std;
 int main() {
   // create a new item
   // SalesItem item("123123123", 12, 72.0);
-  SalesItem item = SalesItem("123123123", 12, 72.0);
+  SalesItem item = SalesItem("123123123", 12, 72.0);  // no new keyword!
 
   // Operator '<<':
   cout << "Created: " << item;
@@ -24,7 +24,7 @@ int main() {
   item += item2;
 
   // Operator '<<': display both item and item2 contents to standard output 
-  cout << "++ " << item2 << " = " << item;
+  cout << "+= " << item2 << " = " << item;
 
   // Alternative: if using AbstSalesItem*
   // item = item + item2;
@@ -33,9 +33,9 @@ int main() {
   cout << "NEW Average price: " << item.getAveragePrice() << endl;
   
   cout << "Enter a new item (use spaces to separate field vals):" << endl;
-  SalesItem item3, item4;
+  SalesItem item3;
   // Operator '>>': create item from input stream
-  cin >> item3 >> item4;
+  cin >> item3;
 
   // Alt: SalesItem item3(cin);
   cout << "Created from input stream: " << item3;

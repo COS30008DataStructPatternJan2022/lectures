@@ -4,6 +4,7 @@ January 2022
 ## Scope: Lecture source code.
 
 This repository contains all the lecture source code.
+Lecture source code is typically published **after the lecture each week**. 
 Remember to check in regulary for code update.
 
 See the image below for how to download/pull source code into your local machine.

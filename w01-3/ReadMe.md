@@ -1,3 +1,6 @@
+Weeks 1-3: Introduction to OOP in C++
+================
+
 # C++ terms
 
 ## History
@@ -20,6 +23,10 @@ We will be using pointers quite extensively in this unit, especially when design
   - `foo = &var`: `foo` is called the **pointer** to `var`
 - `*`: dereference operator (or 'value pointed to by'), which gives access to the value of the variable that the pointer is pointing to
   - `*foo` gives `var`'s value
+
+## L-value & R-value
+- `int&& a` (new in C++11): means `a` is an r-value reference, normally used to define function parameter ([URL](https://en.cppreference.com/w/cpp/language/reference))
+- Read sections 13.6.2 & 13.6.3 of Lippman's book
 
 ### Smart pointers
 Link: https://docs.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170

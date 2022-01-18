@@ -5,6 +5,9 @@ using namespace std;
 
 int main() {
   SalesItem lTotal, lCurrent;
+  // TODO: add suitable input prompts to this program so that it is easier for 
+  // user to know what to input from the command line
+
   // continuously create new SalesItem and group ones that have the same ISBN
   cout << "Enter SalesItem continuously:" << endl;
   if (cin >> lTotal) {
@@ -18,7 +21,7 @@ int main() {
       cout << lTotal << endl;
     }
   } else {
-    cerr << "Error, no data!" << endl;
+    cerr << "Error, wrong data!" << endl;
     return -1;
   }
 

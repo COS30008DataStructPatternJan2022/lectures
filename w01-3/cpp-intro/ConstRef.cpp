@@ -2,32 +2,45 @@
 
 using namespace std;
 
+void constPointers() {
+  cout << "constPointers()" << endl;
+  int bufferSize = 512;
+  const int& fixedBufferSize = bufferSize;
+
+  cout << "bufferSize: " << bufferSize << ", fixedBufferSize: " << fixedBufferSize << endl;
+
+  bufferSize = 1024;  // ok
+  //error: fixedBufferSize = 1024;
+}
+
 // default: call by value
-void Assign(int param, int val) {
+void assign(int param, int val) {
   param = val;
 }
 
 // call by reference
-void AssignRef(int& param, int val) {
+void assignRef(int& param, int val) {
   param = val;
 }
 
 // call by reference but read-only
-void AssignConstRef(const int& param, int val) {
+void assignConstRef(const int& param, int val) {
   // error:
   // param = val;
 }
 
 int main() {
+  constPointers();
+
   int val = 10;
   cout << "Before: val = " << val << endl;
-  Assign(val, 3);
+  assign(val, 3);
   cout << "After Assign(val, 3): val = " << val << endl;
 
-  AssignRef(val, 3);
+  assignRef(val, 3);
   cout << "After AssignRef(val, 3): val = " << val << endl;
 
-  AssignConstRef(val, 3);
+  assignConstRef(val, 3);
   cout << "After AssignConstRef(val, 3): val = " << val << endl;
   return 0;
 }

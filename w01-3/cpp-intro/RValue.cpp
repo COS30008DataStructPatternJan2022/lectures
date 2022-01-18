@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 
 int main() {
   int var = 42;
@@ -5,4 +7,7 @@ int main() {
   // error: initial value of reference to non-const must be an lvalue
   // int& ref2 = 42;
   const int& ref3 = 42;
+
+  cout << ref3 << endl;
+
 }

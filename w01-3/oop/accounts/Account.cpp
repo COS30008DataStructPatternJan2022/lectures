@@ -1,5 +1,8 @@
 #include "Account.h"
 
+/* IMPLEMENTATION */
+
+// todo: what is another way of initialising the attributes?
 Account::Account (unsigned long long aNumber, double aBalance) {
   fNumber = aNumber;
   fBalance = aBalance;

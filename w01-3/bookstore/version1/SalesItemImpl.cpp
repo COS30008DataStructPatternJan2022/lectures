@@ -1,9 +1,9 @@
-#include "AbstSalesItem.h"
+#include "SalesItem.h"
 
 using namespace std;
 
 // implements an operation +
-AbstSalesItem& AbstSalesItem::operator += (const AbstSalesItem& aRHS) {
+SalesItem& SalesItem::operator += (const SalesItem& aRHS) {
   fUnitsSold += aRHS.fUnitsSold;
   fRevenue += aRHS.fRevenue;
 
@@ -11,7 +11,7 @@ AbstSalesItem& AbstSalesItem::operator += (const AbstSalesItem& aRHS) {
 }
 
 // implements operation: getAveragePrice
-double AbstSalesItem::getAveragePrice() const {
+double SalesItem::getAveragePrice() const {
   if (this->fUnitsSold == 0) {
     return 0;
   } else {
@@ -21,18 +21,18 @@ double AbstSalesItem::getAveragePrice() const {
 
 int main() {
   // create a new item
-  AbstSalesItem item("123123123", 12, 72.0);
+  SalesItem item("123123123", 12, 72.0);
   // process the item and display result
   cout << "Average price: " << item.getAveragePrice() << endl;
-  // Alternative: using AbstSalesItem*
-  // AbstSalesItem* item = new AbstSalesItem("123123123", 12, 72.0);
+  // Alternative: using SalesItem*
+  // SalesItem* item = new SalesItem("123123123", 12, 72.0);
   // cout << "Average price: " << item->getAveragePrice() << endl;
   
   // create another item 
-  AbstSalesItem item2("312212313", 15, 60.0);
+  SalesItem item2("312212313", 15, 60.0);
   item += item2;
 
-  // Alternative: if using AbstSalesItem*
+  // Alternative: if using SalesItem*
   // item = item + item2;
   cout << "NEW Average price: " << item.getAveragePrice() << endl;
 

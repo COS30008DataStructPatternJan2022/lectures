@@ -5,7 +5,7 @@ private:
   double fInterestRate;
 
 public: 
-  BankAccount (unsigned long long aNumber, double aBalance, double aInterestRate = 0.0) : Account (aNumber, aBalance){
+  BankAccount (unsigned long long aNumber, double aBalance, double aInterestRate = 0.0) : Account (aNumber, aBalance) {
     fInterestRate = aInterestRate;
   }
 
