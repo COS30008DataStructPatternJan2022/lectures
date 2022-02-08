@@ -11,6 +11,8 @@ void constPointers() {
 
   bufferSize = 1024;  // ok
   //error: fixedBufferSize = 1024;
+  cout << "bufferSize: " << bufferSize << ", fixedBufferSize: " << fixedBufferSize << endl;
+
 }
 
 // default: call by value

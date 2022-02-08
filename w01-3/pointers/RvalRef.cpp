@@ -16,6 +16,11 @@ void changeVal(int&& rVal) {
 int main() {
   int val = 10;
 
+  // error
+  // int&& rrefVal = val;
+
+  int&& rrefVal = 10;
+  
   // move: converts val to an r-value reference, and therefore can change it
   int&& rrefVal = std::move(val);
   cout << rrefVal << endl;

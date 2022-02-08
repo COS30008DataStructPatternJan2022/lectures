@@ -12,13 +12,14 @@ public:
   ~BankAccount() override {}
 
   bool withdraw(double aAmount) override {
-    if ( this->getBalance() > aAmount) {
+    if ( getBalance() > aAmount) {
       return Account::withdraw(aAmount);
     } else {
       return false;
     }
   }
   
+  // todo: implement these methods
   void setInterestRate(double aInterestRate);
   double getInterestRate() const;
   bool creditIntest();
