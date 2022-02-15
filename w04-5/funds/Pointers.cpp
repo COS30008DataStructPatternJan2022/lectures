@@ -5,6 +5,9 @@ using namespace std;
 
 int main() {
   int ivar = 3;
+  
+  // cout << "";
+
   printf("ivar = %d\n", ivar);
 
   int* pivar = &ivar;

@@ -33,6 +33,8 @@ const int& IntArrayIndexer::operator[] (const string& aKey) const {
 
 int main() {
   int a[] = {1,2,3,4,5,100};
+  // traditional: a[0], a[1],...
+
   int len = 6;
   // cout << "Array: " << a << "; length: " << len << endl;
   cout << "Creating indexer for array" << endl;
@@ -41,8 +43,16 @@ int main() {
   string keys[] = {"0", "1", "2", "3", "4", "5"};
   int Sum = 0;
 
+  // 
+  string key = keys[1];
+  int val = indexer[key];
+  cout << "indexer[\"" << key << "\"] = " << val << endl;
+
   for (int i = 0; i < len; i++) {
-    Sum += indexer[keys[i]];
+    //Sum += indexer[keys[i]];
+    // previously: indexer++, indexer += otherIndexer
+    string key = keys[i];
+    Sum += indexer[key]; // operator []
   }
 
   cout << "Indexed sum of " << arrToString(a, len) << " is " << Sum << endl;

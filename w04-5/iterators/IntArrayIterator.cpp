@@ -4,10 +4,12 @@
 using namespace std;
 
 /* Implementation of IntArrayIterator.h */
-IntArrayIterator::IntArrayIterator(const int aArray[], const int aLength, int aStart): fArrayElements(aArray), fLength(aLength) {
-  fIndex = aStart;
+IntArrayIterator::IntArrayIterator(const int aArray[], const int aLength, int aStart): 
+  fArrayElements(aArray), fLength(aLength), fIndex(aStart) {
+  // fIndex = aStart;
 }
 
+// dereference operator
 const int& IntArrayIterator::operator*() const {
   return fArrayElements[fIndex];
 }
@@ -37,7 +39,7 @@ bool IntArrayIterator::operator!=(const IntArrayIterator& aOther) const {
 
 IntArrayIterator IntArrayIterator::begin() const {
   // return a new object
-  // return IntArrayIterator(fArrayElements, fLength);
+  // return IntArrayIterator(fArrayElements, fLength);  // aStart = 0 (default)
 
   /* 
     alternative: clone instead
@@ -65,7 +67,13 @@ IntArrayIterator IntArrayIterator::end() const {
 using namespace toolkit;
 
 void iteratorWithFor() {
+  cout << endl << "iteratorWithFor()" << endl;
   int a[] = {1,2,3,4,5,100};
+
+  cout << "Array: "; printIntArr(a, 6); 
+
+  // sizeof(a): size of a
+  // sizeof(*a): size of element in a
   const int len = sizeof(a) / sizeof(*a);
   int Sum = 0;
 
@@ -77,7 +85,11 @@ void iteratorWithFor() {
 }
 
 void iteratorWithForEach() {
+  cout << endl << "iteratorWithForEach()" << endl;
+
   int a[] = {1,2,3,4,5,100};
+  cout << "Array: "; printIntArr(a, 6);
+
   const int len = sizeof(a) / sizeof(*a);
   int Sum = 0;
 
@@ -89,10 +101,8 @@ void iteratorWithForEach() {
 }
 
 int main() {
-  cout << "Iterator: using normal for loop" << endl;
   iteratorWithFor();
 
-  cout << "Iterator: using for-each loop" << endl;
   iteratorWithForEach();
 
   return 0;
