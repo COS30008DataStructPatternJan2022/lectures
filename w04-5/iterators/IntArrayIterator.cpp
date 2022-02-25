@@ -1,10 +1,7 @@
 #include "IntArrayIterator.h"
-#include <iostream>
-
-using namespace std;
 
 /* Implementation of IntArrayIterator.h */
-IntArrayIterator::IntArrayIterator(const int aArray[], const int aLength, int aStart): 
+IntArrayIterator::IntArrayIterator(const int aArray[], const int aLength, int aStart) : 
   fArrayElements(aArray), fLength(aLength), fIndex(aStart) {
   // fIndex = aStart;
 }
@@ -63,21 +60,28 @@ IntArrayIterator IntArrayIterator::end() const {
 
 /* END: implementation of IntArrayIterator.h  */
 
+#include <iostream>
+using namespace std;
 #include "../../../utils/functions/Functions.cpp"
 using namespace toolkit;
 
 void iteratorWithFor() {
   cout << endl << "iteratorWithFor()" << endl;
+  // (1) initialise the collection
   int a[] = {1,2,3,4,5,100};
 
   cout << "Array: "; printIntArr(a, 6); 
 
   // sizeof(a): size of a
   // sizeof(*a): size of element in a
-  const int len = sizeof(a) / sizeof(*a);
+  const int len = sizeof(a) / sizeof(*a); // no manual: 6
   int Sum = 0;
 
-  for (IntArrayIterator iter(a, len); iter != iter.end(); iter++) {
+  // (2) Iterator object for the collection
+  IntArrayIterator iter(a, len);
+
+  // (3) Use Iterator object to process the elements (class for loop)
+  for (; iter != iter.end(); iter++) {
     Sum += *iter;
   }
 
@@ -86,14 +90,18 @@ void iteratorWithFor() {
 
 void iteratorWithForEach() {
   cout << endl << "iteratorWithForEach()" << endl;
-
+  // (1) initialise the collection
   int a[] = {1,2,3,4,5,100};
   cout << "Array: "; printIntArr(a, 6);
 
   const int len = sizeof(a) / sizeof(*a);
   int Sum = 0;
+  // (2) Iterator object for the collection
+  IntArrayIterator iter(a, len);
+  // *iter = 100;
 
-  for (const auto& i : IntArrayIterator(a, len)) {
+  // (3) Use Iterator object to process the elements (new for-each loop)
+  for (const auto& i : iter) {
     Sum += i;
   }
 
