@@ -4,7 +4,7 @@ using namespace std;
 
 /* post: compute and return n! */
 long factorial (unsigned long n) {
-  if (n == 0) {
+  if (n == 0) { // suggestion: change to n == 1
     return 1;
   } else {
     return n * factorial(n-1);  // recursion
@@ -14,9 +14,9 @@ long factorial (unsigned long n) {
 // rewritten using tail-recursion
 void tailFactorial (unsigned long n, unsigned long& f) {
   if (n == 1) {
-    // stop
-  } else {
-    f = f * n;
+    // stop (return f)
+  } else {  // f = (n-1)!
+    f = n * f;  // n * (n-1)!
     return tailFactorial(n-1, f);  // // tail recursion
   }
 }

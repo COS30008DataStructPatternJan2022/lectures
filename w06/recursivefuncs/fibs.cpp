@@ -4,9 +4,9 @@ using namespace std;
 
 /* post: compute and return the Fibonacci f(n) */
 long fib (unsigned long n) {
-  if (n <= 2) {
+  if (n <= 2) { // f(1), f(2)
     return 1;
-  } else {
+  } else {  // f(n) = f(n-1) + f(n-2)
     return fib(n-1) + fib(n-2);  // recursion
   }
 }
