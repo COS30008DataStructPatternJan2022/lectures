@@ -6,10 +6,13 @@
 
 using namespace std;
 
-/* post: print to the standard output elements of lst one by one on the same line */
-void printList(list<int> lst) {
+/* 
+Define a template function.
+post: print to the standard output elements of lst one by one on the same line 
+*/
+template <typename T> void printList(list<T>& lst) {
   cout << "List: ";
-  for (int& i : lst) {
+  for (const T& i : lst) {
     cout << i << " ";
   }
   cout << endl;
