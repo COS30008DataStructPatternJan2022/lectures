@@ -11,7 +11,7 @@ rvalue.
 
 # Templates
 **Reference**:
-- Lippman et al, Chapter 6:
+- Lippman et al, Chapter 16:
   - function templates: 16.1.1
   - class templates: 16.1.2
 

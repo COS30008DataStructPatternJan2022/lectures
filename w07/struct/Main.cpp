@@ -13,14 +13,14 @@ int main() {
   SinglyLinkedList Two(2, &One);
 
   // use l-value constructor
-  DataType three = 3;
+  DataType three = 3; // three: l-value
   SinglyLinkedList Three(three, &Two);
 
   SinglyLinkedList* lTop = &Three;  // using pointer
   
   cout << "Linked list:" << endl;
   for ( ; lTop != nullptr; lTop = lTop->fNext) {
-    cout << "Value: " << lTop-> fData << endl;
+    cout << "Value: " << lTop->fData << endl;
   }
 
   return 0;

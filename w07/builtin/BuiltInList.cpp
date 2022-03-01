@@ -16,7 +16,7 @@ void printList(list<int> lst) {
 }
 
 int main() {
-  list<int> lst = {1,2,3,4,5};
+  list<int> lst = {1,2,3,4,5};  // similar to array initialisation
   printList(lst);
 
   // accessor operations
