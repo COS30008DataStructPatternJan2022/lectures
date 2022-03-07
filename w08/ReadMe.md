@@ -33,7 +33,18 @@ Every object has an associated lifetime.
 - Video 1: https://youtu.be/uG_JOJgwbco, visual explanation of:
    - call stack, frames, heap, automatic and dynamic objects/variables
    - the `new`, `delete` keywords
-- Explanation: https://people.cs.rutgers.edu/~pxk/419/notes/frames.html
+- Text explanation: https://people.cs.rutgers.edu/~pxk/419/notes/frames.html
 - Video 2: https://youtu.be/aCPkszeKRa4
   - visual explanation of call stack, using recursion to illustrate
 
+# SimpleString implementation
+- include library `#include <cstring>` to use function `strlen`
+- strings are terminated by a null character `\0`, which is not counted in the string length
+  - i.e. an empty string is the string containing `\0`
+
+# Reference count
+- Alternative to the lecture slide's method is the use of C++11's **smart pointer**:
+  - See Lippman et al, Section 12.1 (dynamic memory and smart pointers)
+  - code example in folder: `refcount`
+- Garbage collection algorithm: **Mark and Sweep**
+  - one of the commonly-used GC techniques: [see this note for details](https://web.stanford.edu/class/cs143/lectures/lecture17.pdf)
