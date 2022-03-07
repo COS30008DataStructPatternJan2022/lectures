@@ -7,6 +7,9 @@
   - 12: Dynamic memory
   - 13: Copy control
 
+## Note
+- Code examples starting from the slide titled "SimpleString" are to be performed as part of `lab09`
+
 # Object life time
 (Lipman, Chapter 6)
 
@@ -27,13 +30,10 @@ Every object has an associated lifetime.
 
 ## C++ call stack explanation
 
-- Video 1: https://youtu.be/uG_JOJgwbco
-  Visual explanation of:
+- Video 1: https://youtu.be/uG_JOJgwbco, visual explanation of:
    - call stack, frames, heap, automatic and dynamic objects/variables
    - the `new`, `delete` keywords
 - Explanation: https://people.cs.rutgers.edu/~pxk/419/notes/frames.html
 - Video 2: https://youtu.be/aCPkszeKRa4
   - visual explanation of call stack, using recursion to illustrate
 
-## Note
-- The main code examples are provided as part of `lab09`
