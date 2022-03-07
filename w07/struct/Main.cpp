@@ -16,11 +16,11 @@ int main() {
   DataType three = 3; // three: l-value
   SinglyLinkedList Three(three, &Two);
 
-  SinglyLinkedList* lTop = &Three;  // using pointer
+  SinglyLinkedList* lCurrent = &Three;  // using pointer
   
   cout << "Linked list:" << endl;
-  for ( ; lTop != nullptr; lTop = lTop->fNext) {
-    cout << "Value: " << lTop->fData << endl;
+  for ( ; lCurrent != nullptr; lCurrent = lCurrent->fNext) {
+    cout << "Value: " << lCurrent->fData << endl;
   }
 
   return 0;

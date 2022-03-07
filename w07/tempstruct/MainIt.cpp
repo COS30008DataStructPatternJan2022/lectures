@@ -32,7 +32,7 @@ int main() {
   //  create list iterator
   IntegerListIterator it(&Three);
 
-  // for-range loop
+  // for-range loop: easier to code!
   for ( const int& i : it) {  // or IntegerListIterator(&Three)
     cout << "Value: " << i<< endl;
   }
