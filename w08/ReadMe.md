@@ -3,9 +3,9 @@
 - Lippman et al:
   - 6.1.1: Local static objects
   - 7.6: Static class members (data member and function)
-  - 19.1: Controlling memory allocation
   - 12: Dynamic memory
   - 13: Copy control
+  - 19.1: Controlling memory allocation
 
 ## Note
 - Code examples starting from the slide titled "SimpleString" are to be performed as part of `lab09`
