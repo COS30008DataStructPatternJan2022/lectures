@@ -29,7 +29,6 @@ Every object has an associated lifetime.
   - easier said than done! (helped in C++11 by smart pointers)
 
 ## C++ call stack explanation
-
 - Video 1: https://youtu.be/uG_JOJgwbco, visual explanation of:
    - call stack, frames, heap, automatic and dynamic objects/variables
    - the `new`, `delete` keywords
