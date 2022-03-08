@@ -46,5 +46,5 @@ Every object has an associated lifetime.
 - Alternative to the lecture slide's method is the use of C++11's **smart pointer**:
   - See Lippman et al, Section 12.1 (dynamic memory and smart pointers)
   - code example in folder: `refcount`
-- Garbage collection algorithm: **Mark and Sweep**
+- **Mark and Sweep**: a garbage collection algorithm
   - one of the commonly-used GC techniques: [see this note for details](https://web.stanford.edu/class/cs143/lectures/lecture17.pdf)
