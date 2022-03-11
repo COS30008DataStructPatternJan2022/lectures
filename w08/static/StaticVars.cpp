@@ -20,7 +20,7 @@ private:
   const static int LocalConstClassACounter = 1000;
 
 public:
-  A() : id(LocalClassACounter) {}
+  A() : id(LocalClassACounter++) {}
 
   // public static class variable
   static int PublicClassACounter;

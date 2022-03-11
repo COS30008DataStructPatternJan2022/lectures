@@ -3,7 +3,7 @@
 - Lippman et al:
   - 6.1.1: Local static objects
   - 7.6: Static class members (data member and function)
-  - 12: Dynamic memory
+  - 12: Dynamic memory in C++
   - 13: Copy control
   - 19.1: Controlling memory allocation
 
