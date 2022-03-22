@@ -48,11 +48,8 @@ public:
   virtual ~NTree() {
     for (size_t i = 0; i < N; i++) {
       if ( fNodes[i] != &NIL) {  // dont delete NIL
-        // run-time error ("double free or corruption (out)") if do not detach all nodes before this deconstructor is called!
-        // delete fNodes[i];
-        
-        // replaced by the following statement. This matches with the meaning of N-ary tree AND the original intention that the deconstructor does not delete NIL (the if check above).
-        fNodes[i] = &NIL;
+        // ERROR: run-time error ("double free or corruption (out)") if do not detach all nodes before this deconstructor is called!
+        delete fNodes[i];
       }
     }
   }
@@ -64,7 +61,7 @@ public:
     if (!aOtherNTree.empty()) {
       if (this != &aOtherNTree) {
         // the root
-        fKey = std::move(aOtherNTree.fKey);
+        fKey = aOtherNTree.fKey;
         // the subtrees
         for (size_t i = 0; i < N; i++) {
           if (!aOtherNTree[i].empty()) {  // assign as new to clone
@@ -90,6 +87,7 @@ public:
         // the subtrees
         for (size_t i = 0; i < N; i++) {
           if (!aOtherNTree[i].empty()) {
+            delete fNodes[i]; // delete existing 
             fNodes[i] = const_cast<NTree<T,N>*>(&aOtherNTree.detach(i));
           } else {
             fNodes[i] = &NIL;
@@ -105,6 +103,7 @@ public:
 
   /* clone a tree */
   virtual NTree* clone() {
+    // throw std::domain_error("Not Yet Implemented!");
     if (!empty()){
       return new NTree(*this);              // return new object
     } else {
