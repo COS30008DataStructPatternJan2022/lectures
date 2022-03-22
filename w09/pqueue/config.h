@@ -1,3 +1,3 @@
 #pragma once
 
-static const bool debug = true;
+static const bool debug = false;

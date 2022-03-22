@@ -13,21 +13,24 @@ int main() {
   cout << "Number of elements on the stack: " << lStack.size() << endl;
 
   // manual pop
-  cout << "Top: " << lStack.top() << endl;
+/*   cout << "Top: " << lStack.top() << endl;
   lStack.pop();
   cout << "Top (after pop()): " << lStack.top() << endl;
   lStack.pop();
-  lStack.pop();
+  lStack.pop(); */
 
   // alternative: loop
-  /* while (!lStack.isEmpty()) {
+  while (!lStack.isEmpty()) {
     cout << " " << lStack.top();
     lStack.pop();
   }
-  cout << endl; */
+  cout << endl;
 
   //
   cout << "Number of elements on the stack: " << lStack.size() << endl;
+
+  // exception here!
+  lStack.pop();
 
   return 0;
 }

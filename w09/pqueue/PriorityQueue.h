@@ -38,7 +38,6 @@ public:
  // insert element at the suitable position (determined based on sorting)
   void enqueue( const T& aItem ) {
     // insert aItem at the suitable position 
-    // loop using iterator to get access to the position for insertion
     if (debug) cout << "enqueue(" << aItem << ")" << endl;
     if (isEmpty()) {
         fElements.push_back(aItem);
@@ -46,6 +45,7 @@ public:
     } else {
       bool inserted = false;
       auto it = fElements.begin();
+      // loop using iterator to get access to the position for insertion
       for (it = fElements.begin(); it != fElements.end(); it++) {
         auto currElement = *it;
         if (debug) cout << "  currElement: " << currElement << endl;

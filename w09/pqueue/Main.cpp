@@ -29,10 +29,10 @@ void queueOfPairs() {
   PriorityQueue< Pair<int,int> > lQueue;
   lQueue.enqueue(Pair<int,int>(4,20));
   lQueue.enqueue(Pair<int,int>(5,30));
+  lQueue.enqueue(Pair<int,int>(5,25));
   lQueue.enqueue(Pair<int,int>(4,29));
   lQueue.enqueue(Pair<int,int>(6,15));
   lQueue.enqueue(Pair<int,int>(3,45));
-  lQueue.enqueue(Pair<int,int>(5,25));
 
   cout << "Number of elements in the queue: " << lQueue.size() << endl;
   cout << "Top: " << lQueue.top() << endl; 

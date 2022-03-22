@@ -13,12 +13,12 @@ int main() {
   cout << "Number of elements in the queue: " << lQueue.size() << endl;
 
   /* manual dequeue */
-  cout << "Top: " << lQueue.top() << endl; 
+/*   cout << "Top: " << lQueue.top() << endl; 
   lQueue.dequeue();
   cout << "Top: " << lQueue.top() << endl; 
   lQueue.dequeue();
   cout << "Top: " << lQueue.top() << endl; 
-  lQueue.dequeue();
+  lQueue.dequeue(); */
 
   /* alternative: loop  */
   while (!lQueue.isEmpty()) {

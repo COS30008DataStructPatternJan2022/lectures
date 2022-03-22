@@ -10,7 +10,7 @@ Lecture slides discuss custom designs of stack and queue.
 # References
 - Lippman et all
   - Chapter 9 (Sequential Containers):
-    - Section 9.6: Container adaptors (stack, queue)
+    - Section 9.6: Container adapters (stack, queue)
 - Other references
   - Stack: http://www.cplusplus.com/reference/stack/stack/
     - suitable underlying container types: deque, vector

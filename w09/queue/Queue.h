@@ -39,7 +39,7 @@ public:
   void dequeue() {
     if (!isEmpty()) {
       fElements.pop_front();
-      // fElements.remove(fElements[0]);
+      // slide: fElements.remove(fElements[0]);
     } else {
       throw std::underflow_error("Queue empty.");
     }
@@ -48,8 +48,8 @@ public:
   // access element at front
 	const T& top() const {
     if (!isEmpty()) {
-      // return fElements[0];
-      return *fElements.begin();
+      // slide: return fElements[0];
+      return * fElements.begin();
     } else {
       throw std::underflow_error("Queue empty.");
     }
