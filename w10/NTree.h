@@ -64,7 +64,8 @@ public:
         fKey = aOtherNTree.fKey;
         // the subtrees
         for (size_t i = 0; i < N; i++) {
-          if (!aOtherNTree[i].empty()) {  // assign as new to clone
+          // if (!aOtherNTree[i].empty()) {  // assign as new to clone
+          if (!fNodes[i]->empty()) {
             delete fNodes[i]; // delete existing 
             fNodes[i] = const_cast<NTree<T,N>&>(aOtherNTree[i]).clone();
           } else {
@@ -86,7 +87,8 @@ public:
         fKey = std::move(aOtherNTree.fKey);
         // the subtrees
         for (size_t i = 0; i < N; i++) {
-          if (!aOtherNTree[i].empty()) {
+          // if (!aOtherNTree[i].empty()) {
+          if (!fNodes[i]->empty()) {
             delete fNodes[i]; // delete existing 
             fNodes[i] = const_cast<NTree<T,N>*>(&aOtherNTree.detach(i));
           } else {
@@ -99,7 +101,6 @@ public:
       throw std::domain_error("Illegal tree operation: target tree is empty");
     }
   }
-
 
   /* clone a tree */
   virtual NTree* clone() {
