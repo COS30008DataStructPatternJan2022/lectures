@@ -4,7 +4,8 @@
 template<typename T, size_t N>
 class NTree {
 private:
-  /* T() for empty NTree */
+  /* payload or data that a tree node carries. 
+  Use T() for empty NTree */
   T fKey;
   /* array of N subtrees of degree N */
   NTree<T,N>* fNodes[N];
@@ -15,6 +16,7 @@ private:
 public: 
   /* empty tree */
   static NTree<T,N> NIL;
+  
   /* constructor: NTree leaf */
   NTree(const T& aKey);
   /* constructor: NTree leaf */

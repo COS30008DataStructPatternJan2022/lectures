@@ -29,10 +29,10 @@ int main() {
   cout << "root[2]: " << *root[2] << endl;
   cout << "root[1][1]: " << *root[1][1] << endl;
 
-  const_cast<NS3Tree&>(root[1]).detach(1);
-  root.detach(0);
-  root.detach(1);
-  root.detach(2);
+  // const_cast<NS3Tree&>(root[1]).detach(1);
+  // root.detach(0);
+  // root.detach(1);
+  // root.detach(2);
 
   // this must be done after root.detach(0)!
   // root.attach(0, NS3Tree("new A"));

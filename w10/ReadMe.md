@@ -3,6 +3,7 @@
 - Cormen et al:
   - Section 10.4: Rooted tree
 
+
 # Slide notes
 1. `NTree.h`:
    - slides do not provide implementation for some operations
