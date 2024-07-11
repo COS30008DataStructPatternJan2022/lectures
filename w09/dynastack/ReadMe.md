@@ -1,1 +1,0 @@
-Implementation of a dynamic `Stack.h` using `list` to represent the elements.
